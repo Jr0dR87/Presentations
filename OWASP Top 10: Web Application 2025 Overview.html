@@ -40,7 +40,7 @@
 
     .reveal ul {
       margin-top: 0.6em;
-      width: 1000px;
+      width: 800px;
     }
 
     .reveal li {
@@ -77,7 +77,6 @@
       padding: 1.2em 1.5em;
       border-radius: 14px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-      max-width: 1000px;
     }
 
     .about-me {
@@ -117,25 +116,30 @@
   </style>
 </head>
 <body>
+
   <div class="reveal">
     <div class="slides">
+
       <section class="title-slide">
         <h2>OWASP Top 10: Web Application 2025 Overview</h2>
         <div class="author">by Jarrod Rizor</div>
       </section>
+
       <section>
         <h2>Agenda</h2>
         <div class="card">
           <ul>
             <li>What is OWASP?</li>
             <li>What is the OWASP Top 10?</li>
-            <li>What Changed from 2021 to 2025</li>
-            <li>Why These Changes Matter?</li>
+            <li>Changes from the Previous OWASP Top 10</li>
+            <li>Changes Overview from 2021 to 2025</li>
+            <li>What This Changes for Developers</li>
             <li>PortSwigger Lab Examples</li>
             <li>References</li>
           </ul>
         </div>
       </section>
+
       <section>
         <h2>About Me</h2>
         <div class="card about-me">
@@ -153,6 +157,7 @@
           <img src="https://owlhacku.com/wp-content/uploads/2023/09/me.jpg" alt="Jarrod Rizor" />
         </div>
       </section>
+
       <section>
         <h2>What is OWASP?</h2>
         <div class="card">
@@ -168,6 +173,7 @@
           </ul>
         </div>
       </section>
+
       <section>
         <h2>What is the OWASP Top 10?</h2>
         <div class="card">
@@ -184,26 +190,37 @@
           </ul>
         </div>
       </section>
+
       <section>
         <h2>Changes from the Previous OWASP Top 10</h2>
         <div class="card">
           <img src="https://owasp.org/Top10/2025/assets/2025-mappings.png" alt="OWASP Top 10 2025 mappings" />
         </div>
       </section>
+
       <section>
-        <h2>Why These Changes Matter</h2>
+        <h2>Changes Overview from 2021 to 2025</h2>
         <div class="card">
-          <p>
-            The updates from 2021 to 2025 reflect how modern applications are actually built and attacked.
-            Security risks now stem less from isolated coding mistakes and more from architectural decisions,
-            insecure defaults, third-party dependencies, and cloud-scale misconfigurations.
-          </p>
-          <p>
-            The focus shifts from finding individual bugs to designing resilient systems where trust boundaries,
-            dependencies, and failure modes are treated as first-class security concerns.
-          </p>
+          <ul>
+            <li>Supply chain and third-party components recognized as primary risk factors</li>
+            <li>Misconfiguration reframed as a design and default settings problem</li>
+            <li>Business logic abuse elevated due to real-world attack prevalence</li>
+          </ul>
         </div>
       </section>
+
+      <section>
+        <h2>What This Changes for Developers</h2>
+        <div class="card">
+          <ul>
+            <li>Design and architecture reviews matter as much as vulnerability scanning</li>
+            <li>Identity, authorization, and trust boundaries must be explicit and tested</li>
+            <li>Third-party dependencies require continuous inventory and monitoring</li>
+            <li>Business logic testing cannot be fully automated</li>
+          </ul>
+        </div>
+      </section>
+
       <section>
         <h2>PortSwigger Lab Examples</h2>
         <div class="card">
@@ -216,6 +233,7 @@
           </ul>
         </div>
       </section>
+
       <section>
         <h2>References</h2>
         <div class="card">
@@ -229,8 +247,10 @@
           </ul>
         </div>
       </section>
+
     </div>
   </div>
+
   <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
   <script>
     Reveal.initialize({
