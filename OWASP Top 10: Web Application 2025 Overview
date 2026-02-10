@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>OWASP Top 10: Web Application 2025 Overview</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" />
+  <style>
+    :root {
+      --accent: #4da3ff;
+      --accent-soft: rgba(77,163,255,0.15);
+      --muted: #a9a9a9;
+      --card-bg: rgba(255,255,255,0.05);
+    }
+
+    .reveal {
+      font-size: 30px;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      text-transform: none;
+      letter-spacing: 0.4px;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal h2 {
+      border-bottom: 2px solid var(--accent-soft);
+      padding-bottom: 0.3em;
+      display: inline-block;
+    }
+
+    .reveal p {
+      line-height: 1.45;
+      max-width: 900px;
+      text-align: left;
+    }
+
+    .reveal ul {
+      margin-top: 0.6em;
+      width: 1000px;
+    }
+
+    .reveal li {
+      margin-bottom: 0.45em;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+
+    .title-slide {
+      text-align: center;
+    }
+
+    .title-slide h2 {
+      font-size: 2em;
+      border: none;
+    }
+
+    .title-slide .subtitle {
+      color: var(--muted);
+      font-size: 1.1em;
+      margin-top: 0.4em;
+    }
+
+    .title-slide .author {
+      margin-top: 1.2em;
+      font-size: 0.9em;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 1.2em 1.5em;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+      max-width: 1000px;
+    }
+
+    .about-me {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 40px;
+    }
+
+    .about-me img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .about-me ul {
+      margin-top: 0.8em;
+      font-size: 0.9em;
+      width: 500px;
+    }
+
+    .reveal img {
+      max-width: 100%;
+      max-height: 70vh;
+      display: block;
+      margin: 1em auto 0;
+    }
+
+    .reveal a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .reveal a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class="title-slide">
+        <h2>OWASP Top 10: Web Application 2025 Overview</h2>
+        <div class="author">by Jarrod Rizor</div>
+      </section>
+      <section>
+        <h2>Agenda</h2>
+        <div class="card">
+          <ul>
+            <li>What is OWASP?</li>
+            <li>What is the OWASP Top 10?</li>
+            <li>What Changed from 2021 to 2025</li>
+            <li>Why These Changes Matter?</li>
+            <li>PortSwigger Lab Examples</li>
+            <li>References</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>About Me</h2>
+        <div class="card about-me">
+          <div>
+            <p>
+              Offensive Services Team Lead for Web and Mobile Applications at <strong>FRSecure</strong>.
+              Co-lead for <strong>Project Hyphae</strong>. Birds of Prey Rehabilitation Volunteer.
+            </p>
+            <ul>
+              <li><strong>Twitter:</strong> <a href="https://x.com/Jr0dR87">Jr0dR87</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jarrod-rizor-7270a832">jarrod-rizor</a></li>
+              <li><strong>Blog:</strong> <a href="https://owlhacku.com">owlhacku.com</a></li>
+            </ul>
+          </div>
+          <img src="https://owlhacku.com/wp-content/uploads/2023/09/me.jpg" alt="Jarrod Rizor" />
+        </div>
+      </section>
+      <section>
+        <h2>What is OWASP?</h2>
+        <div class="card">
+          <p>
+            The <strong>Open Worldwide Application Security Project (OWASP)</strong> is a nonprofit foundation
+            dedicated to improving software security worldwide through community-driven open-source initiatives.
+          </p>
+          <ul>
+            <li>Community-led open source projects</li>
+            <li>250+ local chapters worldwide</li>
+            <li>Tens of thousands of members</li>
+            <li>Industry-leading guidance, training, and conferences</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>What is the OWASP Top 10?</h2>
+        <div class="card">
+          <p>
+            The OWASP Top 10 is a standard awareness document identifying the most critical
+            security risks facing modern applications.
+          </p>
+          <ul>
+            <li>Web Applications</li>
+            <li>Mobile Applications</li>
+            <li>APIs</li>
+            <li>Desktop Applications</li>
+            <li>Large Language Model Applications</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Changes from the Previous OWASP Top 10</h2>
+        <div class="card">
+          <img src="https://owasp.org/Top10/2025/assets/2025-mappings.png" alt="OWASP Top 10 2025 mappings" />
+        </div>
+      </section>
+      <section>
+        <h2>Why These Changes Matter</h2>
+        <div class="card">
+          <p>
+            The updates from 2021 to 2025 reflect how modern applications are actually built and attacked.
+            Security risks now stem less from isolated coding mistakes and more from architectural decisions,
+            insecure defaults, third-party dependencies, and cloud-scale misconfigurations.
+          </p>
+          <p>
+            The focus shifts from finding individual bugs to designing resilient systems where trust boundaries,
+            dependencies, and failure modes are treated as first-class security concerns.
+          </p>
+        </div>
+      </section>
+      <section>
+        <h2>PortSwigger Lab Examples</h2>
+        <div class="card">
+          <ul>
+            <li><a href="https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses">Blind SQL Injection – Conditional Responses</a></li>
+            <li><a href="https://portswigger.net/web-security/access-control/lab-user-role-can-be-modified-in-user-profile">Broken Access Control – User Role Modification</a></li>
+            <li><a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls">Logic Flaws – Excessive Trust in Client-Side Controls</a></li>
+            <li><a href="https://portswigger.net/web-security/host-header/exploiting/password-reset-poisoning/lab-host-header-basic-password-reset-poisoning">Host Header Injection – Password Reset Poisoning</a></li>
+            <li><a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic">Authentication – Broken 2FA Logic</a></li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>References</h2>
+        <div class="card small">
+          <ul>
+            <li><a href="https://owasp.org/Top10/2025/">OWASP Top 10 (2025)</a></li>
+            <li><a href="https://owasp.org/www-project-api-security/">OWASP API Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-mobile-top-10/">OWASP Mobile Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-desktop-app-security-top-10/">OWASP Desktop Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP LLM Top 10</a></li>
+            <li><a href="https://portswigger.net/">PortSwigger Academy</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: "fade"
+    });
+  </script>
+</body>
+</html>
