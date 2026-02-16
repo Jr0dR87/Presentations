@@ -43,10 +43,6 @@
       width: 800px;
     }
 
-    .reveal li {
-      margin-bottom: 0.45em;
-    }
-
     .accent {
       color: var(--accent);
     }
@@ -101,7 +97,7 @@
       max-width: 100%;
       max-height: 70vh;
       display: block;
-      margin: 1em auto 0;
+      margin: 0 auto;
     }
 
     .reveal a {
@@ -120,133 +116,149 @@
   <div class="reveal">
     <div class="slides">
 
-      <section class="title-slide">
+    <section class="title-slide">
         <h2>OWASP Top 10: Web Application 2025 Overview</h2>
         <div class="author">by Jarrod Rizor</div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>Agenda</h2>
         <div class="card">
-          <ul>
-            <li>What is OWASP?</li>
-            <li>What is the OWASP Top 10?</li>
-            <li>Changes from the Previous OWASP Top 10</li>
-            <li>Changes Overview from 2021 to 2025</li>
-            <li>What This Changes for Developers</li>
-            <li>PortSwigger Lab Examples</li>
-            <li>References</li>
-          </ul>
+            <ul>
+                <li>What is OWASP?</li>
+                <li>What is the OWASP Top 10?</li>
+                <li>OWASP Top 10 (2025)</li>
+                <li>Changes from 2021 OWASP Top 10</li>
+                <li>Changes Overview</li>
+                <li>What This Changes for Developers</li>
+                <li>OWASP Juice Shop Demos</li>
+                <li>References</li>
+                <li>Conclusion</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>About Me</h2>
         <div class="card about-me">
-          <div>
-            <p>
-              Offensive Services Team Lead for Web and Mobile Applications at <strong>FRSecure</strong>.
-              Co-lead for <strong>Project Hyphae</strong>. Birds of Prey Rehabilitation Volunteer.
-            </p>
+            <div>
+            <p>Offensive Services Team Lead for Web and Mobile Applications at <strong>FRSecure</strong>. Birds of Prey Rehabilitation Volunteer.</p>
             <ul>
-              <li><strong>Twitter:</strong> <a href="https://x.com/Jr0dR87">Jr0dR87</a></li>
-              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jarrod-rizor-7270a832">Jarrod Rizor</a></li>
-              <li><strong>Blog:</strong> <a href="https://owlhacku.com">owlhacku.com</a></li>
+                <li><strong>Twitter:</strong> <a href="https://x.com/Jr0dR87">Jr0dR87</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jarrod-rizor-7270a832">Jarrod Rizor</a></li>
+                <li><strong>Blog:</strong> <a href="https://owlhacku.com">owlhacku.com</a></li>
             </ul>
-          </div>
-          <img src="https://owlhacku.com/wp-content/uploads/2023/09/me.jpg" alt="Jarrod Rizor" />
+            </div>
+            <img src="https://owlhacku.com/wp-content/uploads/2023/09/me.jpg" alt="Jarrod Rizor" />
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>What is OWASP?</h2>
         <div class="card">
-          <p>
-            The <strong>Open Worldwide Application Security Project (OWASP)</strong> is a nonprofit foundation
-            dedicated to improving software security worldwide through community-driven open-source initiatives.
-          </p>
-          <ul>
+            <p>The <strong>Open Worldwide Application Security Project (OWASP)</strong> is a nonprofit foundation
+            dedicated to improving software security worldwide through community-driven open-source initiatives.</p>
+            <ul>
             <li>Community-led open source projects</li>
             <li>250+ local chapters worldwide</li>
             <li>Tens of thousands of members</li>
             <li>Industry-leading guidance, training, and conferences</li>
-          </ul>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>What is the OWASP Top 10?</h2>
         <div class="card">
-          <p>
-            The OWASP Top 10 is a standard awareness document identifying the most critical
-            security <strong>risks</strong> facing modern applications.
-          </p>
-          <ul>
+        <p>The OWASP Top 10 is a standard awareness document identifying the most critical
+        security <strong>risks</strong> facing modern applications.</p>
+        <ul>
             <li>Web Applications</li>
             <li>Mobile Applications</li>
             <li>APIs</li>
             <li>Desktop Applications</li>
             <li>Large Language Model Applications</li>
-          </ul>
-        </div>
-      </section>
+        </ul>
+    </div>
+    </section>
 
-      <section>
-        <h2>Changes from the Previous OWASP Top 10</h2>
+    <section>
+        <h2>OWASP Top 10 (2025)</h2>
         <div class="card">
-          <img src="https://owasp.org/Top10/2025/assets/2025-mappings.png" alt="OWASP Top 10 2025 mappings" />
+            <ul>
+                <li>A01: Broken Access Control</li>
+                <li>A02: Security Misconfiguration</li>
+                <li>A03: Software Supply Chain Failures</li>
+                <li>A04: Cryptographic Failures</li>
+                <li>A05: Injection</li>
+                <li>A06: Insecure Design</li>
+                <li>A07: Authentication Failures</li>
+                <li>A08: Software and Data Integrity Failures</li>
+                <li>A09: Security Logging and Alerting Failures</li>
+                <li>A10: Mishandling of Exceptional Conditions</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section>
-        <h2>Changes Overview from 2021 to 2025</h2>
+    <section>
+    <h2>Changes from 2021 OWASP Top 10</h2>
+    <div class="card">
+        <img src="https://owasp.org/Top10/2025/assets/2025-mappings.png" alt="OWASP Top 10 2025 mappings" />
+    </div>
+    </section>
+
+    <section>
+        <h2>Changes Overview</h2>
         <div class="card">
-          <ul>
-            <li>Supply chain and third-party components recognized as primary risk factors</li>
-            <li>Misconfiguration reframed as a design and default settings problem</li>
-            <li>Business logic abuse elevated due to real-world attack prevalence</li>
-          </ul>
+            <ul>
+                <li>Supply chain and third-party components are recognized as primary risk factors</li>
+                <li>Misconfiguration reframed as a design and default settings problem</li>
+                <li>Business logic abuse elevated due to real-world attack prevalence</li>
+                <li>Improper error handling now recognized as a root cause of information disclosure and business logic abuse</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>What This Changes for Developers</h2>
         <div class="card">
-          <ul>
-            <li>Design and architecture reviews matter as much as vulnerability scanning</li>
-            <li>Identity, authorization, and trust boundaries must be explicit and tested</li>
-            <li>Third-party dependencies require continuous inventory and monitoring</li>
-            <li>Business logic testing cannot be fully automated</li>
-          </ul>
+            <ul>
+                <li>Development environments and CI/CD pipelines are now part of the attack surface</li>
+                <li>Design and architecture reviews matter as much as vulnerability scanning</li>
+                <li>Third-party dependencies require continuous inventory and monitoring</li>
+                <li>Business logic testing cannot be fully automated</li>
+                <li>Identity, authorization, and trust boundaries must be explicit and tested</li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <section>
-        <h2>PortSwigger Lab Examples</h2>
+    <section>
+        <h2>OWASP Juice Shop Demos</h2>
         <div class="card">
-          <ul>
-            <li><a href="https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses">Blind SQL Injection – Conditional Responses</a></li>
-            <li><a href="https://portswigger.net/web-security/access-control/lab-user-role-can-be-modified-in-user-profile">Broken Access Control – User Role Modification</a></li>
-            <li><a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls">Logic Flaws – Excessive Trust in Client-Side Controls</a></li>
-            <li><a href="https://portswigger.net/web-security/host-header/exploiting/password-reset-poisoning/lab-host-header-basic-password-reset-poisoning">Host Header Injection – Password Reset Poisoning</a></li>
-            <li><a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic">Authentication – Broken 2FA Logic</a></li>
-          </ul>
+            <img src="https://raw.githubusercontent.com/juice-shop/juice-shop/master/screenshots/screenshot01.png"> 
         </div>
-      </section>
+    </section>
 
-      <section>
+    <section>
         <h2>References</h2>
         <div class="card">
           <ul>
             <li><a href="https://owasp.org/Top10/2025/">OWASP Top 10 (2025)</a></li>
-            <li><a href="https://owasp.org/www-project-api-security/">OWASP API Top 10</a></li>
-            <li><a href="https://owasp.org/www-project-mobile-top-10/">OWASP Mobile Top 10</a></li>
-            <li><a href="https://owasp.org/www-project-desktop-app-security-top-10/">OWASP Desktop Top 10</a></li>
-            <li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP LLM Top 10</a></li>
-            <li><a href="https://portswigger.net/">PortSwigger Academy</a></li>
+            <li><a href="https://owasp.org/www-project-api-security/">API Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-mobile-top-10/">Mobile Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-desktop-app-security-top-10/">Desktop Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">LLM Top 10</a></li>
+            <li><a href="https://owasp.org/www-project-juice-shop/">Juice Shop</a></li>
           </ul>
         </div>
-      </section>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <div class="card">
+            <p>Questions?</p>
+        </div>
+    </section>
 
     </div>
   </div>
@@ -254,9 +266,9 @@
   <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
   <script>
     Reveal.initialize({
-      hash: true,
-      slideNumber: true,
-      transition: "fade"
+        hash: true,
+        slideNumber: true,
+        transition: "fade"
     });
   </script>
 </body>
