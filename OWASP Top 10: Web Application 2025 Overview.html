@@ -129,7 +129,9 @@
                 <li>What is the OWASP Top 10?</li>
                 <li>OWASP Top 10 (2025)</li>
                 <li>Changes from 2021 OWASP Top 10</li>
-                <li>Changes Overview</li>
+                <li>Security Misconfiguration</li>
+                <li>Software Supply Chain Failures</li>
+                <li>Mishandling of Exceptional Conditions</li>
                 <li>What This Changes for Developers</li>
                 <li>OWASP Juice Shop Demos</li>
                 <li>References</li>
@@ -208,14 +210,42 @@
     </section>
 
     <section>
-        <h2>Changes Overview</h2>
+        <h2>Security Misconfiguration</h2>
         <div class="card">
             <ul>
-                <li>Supply chain and third-party components are recognized as primary risk factors</li>
-                <li>Misconfiguration reframed as a design and default settings problem</li>
-                <li>Business logic abuse elevated due to real-world attack prevalence</li>
-                <li>Improper error handling now recognized as a root cause of information disclosure and business logic abuse</li>
+                <li>Often caused by insecure defaults, incomplete hardening, or misconfigured infrastructure.</li>
             </ul>
+            <p><strong>Example:</strong> Overly permissive CORS policies.</p>
+            <p><strong>Example:</strong> Public cloud storage buckets exposing sensitive data.</p>
+            <p><strong>Example:</strong> Debug mode enabled in production environments.</p>
+            <p><strong>Example:</strong> Default credentials</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Software Supply Chain Failures</h2>
+        <div class="card">
+            <ul>
+                <li>Lack of clear ownership for third-party risk.</li>
+                <li>A single compromised dependency can cascade into thousands of downstream applications.</li>
+                <li>Failure to remediate dependencies with known vulnerabilities (CVEs).</li>
+            </ul>
+            <p><strong>Example (anti-pattern):</strong> "This component is not owned by our team."</p>
+            <p><strong>Example:</strong> npm ecosystem attacks involving typosquatted packages and compromised maintainers.</p>
+            <p><strong>Example:</strong> Continued use of vulnerable versions of Log4j after the Log4Shell (CVE-2021-44228) disclosure.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Mishandling of Exceptional Conditions</h2>
+        <div class="card">
+            <ul>
+                <li>Error messages sometimes expose stack traces, SQL queries, or system paths.</li>
+                <li>Attackers use these details to understand backend technologies and exploit vulnerabilities.</li>
+                <li>Improper error handling can also reveal authentication or authorization logic flaws.</li>
+            </ul>
+            <p><strong>Example:</strong> Stack traces revealing internal file paths or framework versions.</p>
+            <p><strong>Example:</strong> Database errors leaking SQL queries during injection attempts.</p>
         </div>
     </section>
 
@@ -260,7 +290,6 @@
         <h2>Conclusion</h2>
         <div class="card">
             <p>Questions?</p>
-            <p><a href="https://github.com/Jr0dR87/Presentations/blob/main/OWASP%20Top%2010%3A%20Web%20Application%202025%20Overview.html">Link to Slides</a></p>
         </div>
     </section>
 
