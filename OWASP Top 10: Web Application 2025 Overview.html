@@ -122,25 +122,6 @@
     </section>
 
     <section>
-        <h2>Agenda</h2>
-        <div class="card">
-            <ul>
-                <li>What is OWASP?</li>
-                <li>What is the OWASP Top 10?</li>
-                <li>OWASP Top 10 (2025)</li>
-                <li>Changes from 2021 OWASP Top 10</li>
-                <li>Security Misconfiguration</li>
-                <li>Software Supply Chain Failures</li>
-                <li>Mishandling of Exceptional Conditions</li>
-                <li>What This Changes for Developers</li>
-                <li>OWASP Juice Shop Demos</li>
-                <li>References</li>
-                <li>Conclusion</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
         <h2>About Me</h2>
         <div class="card about-me">
             <div>
@@ -149,9 +130,29 @@
                 <li><strong>Twitter:</strong> <a href="https://x.com/Jr0dR87">Jr0dR87</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jarrod-rizor-7270a832">Jarrod Rizor</a></li>
                 <li><strong>Blog:</strong> <a href="https://owlhacku.com">owlhacku.com</a></li>
+                <li><strong>YouTube:</strong> <a href="https://www.youtube.com/@OwlHacku">OwlHacku</a></li>
             </ul>
             </div>
             <img src="https://owlhacku.com/wp-content/uploads/2023/09/me.jpg" alt="Jarrod Rizor" />
+        </div>
+    </section>
+
+    <section>
+        <h2>Agenda</h2>
+        <div class="card">
+            <ul>
+                <li>What is OWASP?</li>
+                <li>What is the OWASP Top 10?</li>
+                <li>OWASP Top 10 (2025)</li>
+                <li>Changes from 2021 to 2025 Top 10</li>
+                <li>Broken Access Controls</li>
+                <li>Security Misconfiguration</li>
+                <li>Software Supply Chain Failures</li>
+                <li>Mishandling of Exceptional Conditions</li>
+                <li>What This Changes for Developers</li>
+                <li>References</li>
+                <li>Conclusion</li>
+            </ul>
         </div>
     </section>
 
@@ -203,10 +204,20 @@
     </section>
 
     <section>
-    <h2>Changes from 2021 OWASP Top 10</h2>
+    <h2>Changes from 2021 to 2025 Top 10</h2>
     <div class="card">
         <img src="https://owasp.org/Top10/2025/assets/2025-mappings.png" alt="OWASP Top 10 2025 mappings" />
     </div>
+    </section>
+
+    <section>
+        <h2>Broken Access Controls</h2>
+        <div class="card">
+          <p>Occurs when applications fail to properly enforce what users are allowed to access or do.</p>
+          <p>SSRF is now included because it allows attackers to bypass network boundaries and access internal resources through the server.</p>
+          <p><strong>Example:</strong> Permitting viewing or editing someone else's account by providing its unique identifier (insecure direct object references)</p>
+          <p><strong>Example:</strong> Elevation of privilege. Acting as a user without being logged in or or gaining privileges beyond those expected of the logged in user (e.g. admin access).</p>
+        </div>
     </section>
 
     <section>
@@ -259,16 +270,6 @@
                 <li>Business logic testing cannot be fully automated</li>
                 <li>Identity, authorization, and trust boundaries must be explicit and tested</li>
             </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>OWASP Juice Shop Demos</h2>
-        <div class="card">
-            <small>OWASP Juice Shop is a modern, intentionally vulnerable web application designed for security training, awareness demos, 
-                CTFs, and testing security tools. It includes vulnerabilities covering the entire OWASP Top 10 as well as many additional 
-                real-world security flaws, making it an ideal hands-on learning platform.</small>
-            <img src="https://raw.githubusercontent.com/juice-shop/juice-shop/master/screenshots/screenshot01.png"> 
         </div>
     </section>
 
