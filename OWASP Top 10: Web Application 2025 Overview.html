@@ -239,11 +239,11 @@
             <ul>
                 <li>Lack of clear ownership for third-party risk.</li>
                 <li>A single compromised dependency can cascade into thousands of downstream applications.</li>
-                <li>Failure to remediate dependencies with known vulnerabilities (CVEs).</li>
+                <li>Failure to remediate dependencies with known vulnerabilities.</li>
             </ul>
             <p><strong>Example (anti-pattern):</strong> "This component is not owned by our team."</p>
-            <p><strong>Example:</strong> npm ecosystem attacks involving typosquatted packages and compromised maintainers.</p>
-            <p><strong>Example:</strong> Continued use of vulnerable versions of Log4j after the Log4Shell (CVE-2021-44228) disclosure.</p>
+	    <p><strong>Example:</strong> Attackers hijacked a maintainer account to publish backdoored Axios npm releases carrying a malicious dependency that could install malware via routine dependency updates, posing risk to thousands of downstream applications.</p>	    
+	    <p><strong>Example:</strong> Continued use of vulnerable versions of Log4j after the Log4Shell (CVE-2021-44228) disclosure.</p>
         </div>
     </section>
 
