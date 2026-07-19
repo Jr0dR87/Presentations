@@ -1,9 +1,9 @@
  if (Swift.available){
     console.log("[+] Successfully Connected");
 
-    const mod = Process.getModuleByName("DarkBank.debug.dylib");
+    const mod = Process.getModuleByName("DarkBank");
     const target = mod.enumerateSymbols().find(function (s) {
-        return s.name === "$s16IOSSecuritySuite16JailbreakCheckerC13amIJailbrokenSbyFZ";
+        return s.name === "$s16IOSSecuritySuiteAAC13amIJailbrokenSbyFZ";
     });
     
     if (!target) {
