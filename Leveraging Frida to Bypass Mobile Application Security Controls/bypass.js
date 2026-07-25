@@ -1,23 +1,16 @@
  if (Swift.available){
-    console.log("[+] Successfully Connected");
-
+    console.log("[+] Successfully Connected and Detected Swift");
     const mod = Process.getModuleByName("DarkBank");
-    const target = mod.enumerateSymbols().find(function (s) {
-        return s.name === "$s16IOSSecuritySuiteAAC13amIJailbrokenSbyFZ";
+    const target = mod.enumerateSymbols().find(function (symbol) {
+        return symbol.name === "$s16IOSSecuritySuiteAAC13amIJailbrokenSbyFZ";
     });
-    
     if (!target) {
         console.log("[-] Symbol not found");
     } else {
-        console.log("[*] Hooking amIJailbroken() @ " + target.address);
+        console.log("[+] Hooking amIJailbroken() to set to false");
         Interceptor.attach(target.address, {
-            onEnter: function () {
-                console.log("[+] amIJailbroken() called");
-            },
             onLeave: function (retval) {
-                console.log("[+] amIJailbroken() returned: " + retval + " -> forcing false");
-                retval.replace(0);
-                console.log("[+] The Application should be running now :) ")
+                retval.replace(0); // Set function to return false.
             }
         });
     }
