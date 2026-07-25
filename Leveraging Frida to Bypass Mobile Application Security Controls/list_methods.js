@@ -1,10 +1,11 @@
 if (ObjC.available) {
-    console.log("[+] Successfully Connected");
+    console.log(ObjC.classes["IOSSecuritySuite.JailbreakChecker"]);
+    console.log("[+] Successfully Connected and Detected Objective-C");
     const className = "IOSSecuritySuite.JailbreakChecker";
     const cls = ObjC.classes[className];
     console.log("[*] Methods on " + className + ":");
     cls.$methods.forEach(function (m) {
-        console.log("    " + m);
+        console.log(" " + m);
     });
 }
 else{
