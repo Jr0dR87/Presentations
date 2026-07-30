@@ -370,7 +370,6 @@
                 <li>Using Frida to Enumerate an iOS Application's Security Controls</li>
                 <li>The Joys of Mangling</li>
                 <li>Frida CodeShare</li>
-                <li>Putting the Final Pieces Together</li>
                 <li>Finally Bypassing IOSSecuritySuite</li>
                 <li>References</li>
                 <li>Questions</li>
@@ -403,7 +402,7 @@
 </section>
 
 <section>
-    <h2>Enumerating The Application</h2>
+    <h2>Reviewing The iOS Application</h2>
     <div class="terminal">
       <div class="terminal-bar">
         <span class="terminal-dot dot-red"></span>
@@ -767,7 +766,54 @@ static IOSSecuritySuite.IOSSecuritySuite.amIJailbroken() -> Swift.Bool</code></p
 </section>
 
 <section>
-    <h2>Frida CodeShare</h2>
+    <h2>Static vs. Dynamic Linking</h2>
+
+    <div style="display:flex; gap:50px;">
+
+        <div style="flex:1;">
+            <h3>Dynamic Linking</h3>
+
+<pre><code class="language-text">App Bundle
+
+DarkBank
+IOSSecuritySuite.framework
+UIKitCore
+Foundation
+</code></pre>
+
+            <p style="font-size:0.8em;">
+                Library remains a separate framework at runtime.
+            </p>
+        </div>
+
+        <div style="flex:1;">
+            <h3>Static Linking</h3>
+
+<pre><code class="language-text">App Bundle
+
+DarkBank
+ ├─ Application Code
+ ├─ IOSSecuritySuite
+ └─ Other Libraries
+</code></pre>
+
+            <p style="font-size:0.8em;">
+                Library is compiled directly into the application.
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <blockquote>
+        Frida can only hook loaded modules. A statically linked library becomes part of the application's executable.
+    </blockquote>
+
+</section>
+
+<section>
+    <h2>Finally Bypassing IOSSecuritySuite</h2>
     <div class="terminal">
       <div class="terminal-bar">
         <span class="terminal-dot dot-red"></span>
@@ -803,7 +849,7 @@ static IOSSecuritySuite.IOSSecuritySuite.amIJailbroken() -> Swift.Bool</code></p
 </section>
 
 <section>
-    <h2>Frida CodeShare</h2>
+    <h2>Finally Bypassing IOSSecuritySuite</h2>
     <div class="terminal">
       <div class="terminal-bar">
         <span class="terminal-dot dot-red"></span>
@@ -819,6 +865,7 @@ static IOSSecuritySuite.IOSSecuritySuite.amIJailbroken() -> Swift.Bool</code></p
     </div>
 </section>
 
+<!--
 <section>
     <h2>Putting the Final Pieces Together</h2>
     <div class="terminal">
@@ -853,6 +900,7 @@ else{
     </div>
 </section>
 
+
 <section>
     <h2>Putting the Final Pieces Together</h2>
     <div class="terminal">
@@ -869,6 +917,7 @@ else{
       </div>
     </div>
 </section>
+
 
 <section>
     <h2>Finally Bypassing IOSSecuritySuite</h2>
@@ -904,6 +953,7 @@ else{
     </div>
 </section>
 
+
 <section>
     <h2>Finally Bypassing IOSSecuritySuite</h2>
     <div class="terminal">
@@ -920,7 +970,7 @@ else{
       </div>
     </div>
 </section>
-
+-->
 <section>
     <h2>Key Takeaways</h2>
     <div class="terminal">
