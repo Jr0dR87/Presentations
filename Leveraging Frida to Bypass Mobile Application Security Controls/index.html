@@ -428,6 +428,7 @@
         <span class="terminal-title">frida-ps -Uia</span>
       </div>
       <div class="terminal-body">
+        <span>Lists all processes (apps) running on the device, including their names, identifiers, and PIDs.</span>
         <video width="640" height="480" controls>
           <source src="videos/frida-ps.mp4" type="video/mp4">
         </video>
@@ -986,7 +987,7 @@ else{
       <div class="terminal-body">
         <ul>
             <li>Frida enables runtime analysis without modifying or rebuilding the target application.</li>
-            <li>Application enumeration is the foundation of successful runtime analysis—identify Objective-C classes, Swift symbols, and implemented security controls before attempting a bypass.</li>
+            <li>Application enumeration is the foundation of successful runtime analysis and identify Objective-C classes, Swift symbols, and implemented security controls before attempting a bypass.</li>
             <li>Swift name mangling can obscure security-related functions, but tools such as <code>swift-demangle</code> make those symbols understandable.</li>
             <li>Frida hooks code loaded into the process. With static linking, library code becomes part of the application's executable rather than a separate framework image.</li>
             <li>Understanding how an application's security controls are implemented is often more valuable than relying on generic bypass scripts.</li>
