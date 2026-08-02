@@ -379,7 +379,7 @@
                 <li>Using Frida to Enumerate an iOS Application's Security Controls</li>
                 <li>The Joys of Mangling</li>
                 <li>Frida CodeShare</li>
-                <li>Finally Bypassing IOSSecuritySuite</li>
+                <li>Finally Bypassing the Security Controls</li>
                 <li>References</li>
                 <li>Questions</li>
             </ul>
@@ -849,9 +849,46 @@ static IOSSecuritySuite.IOSSecuritySuite.amIJailbroken() -> Swift.Bool
       enumerate symbols from the application's main executable rather than a separate framework.</span>
     <br /><br />
     <span>
-        <strong class="ok">Process.findModuleByName()</strong> searches the Mach-O images currently loaded into the target process and returns the matching module. If no module with that name is loaded, it returns <code>null</code>, so Frida cannot enumerate or hook symbols from it.
+      <strong class="accent">Process.findModuleByName(name)</strong> and <strong class="accent">Process.getModuleByName(name)</strong> returns a Module whose address or name matches the one specified. In the event that no such module could be found, the find-prefixed functions return null whilst the get-prefixed functions throw an exception.
     </span>
     <br><br>
+</section>
+
+<section>
+    <h2>Finally Bypassing IOSSecuritySuite</h2>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-amber"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">frida -U -l get_name.js -f com.darkbank.defcon</span>
+      </div>
+      <div class="terminal-body">
+        <pre><code class="language-javascript">if (ObjC.available) {
+    console.log("[+] Successfully Connected and Detected Objective-C");
+    console.log(`[+] Module name is : ${Process.mainModule.name}`)
+} else {
+    console.log("[-] ObjC not available");
+}</code></pre>
+      </div>
+    </div>
+</section>
+
+<section>
+    <h2>Finally Bypassing IOSSecuritySuite</h2>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-amber"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">frida -U -l success.js -f com.darkbank.defcon</span>
+      </div>
+      <div class="terminal-body">
+        <video controls>
+          <source src="videos/get_name.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 </section>
 
 <section>
